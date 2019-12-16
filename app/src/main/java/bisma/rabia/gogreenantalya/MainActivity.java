@@ -1,6 +1,4 @@
-package one.block.androidexampleapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package bisma.rabia.gogreenantalya;
 
 import android.os.Bundle;
 import android.text.Html;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 

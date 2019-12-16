@@ -70,7 +70,7 @@ To do this we are using a few libraries and providers, in concert:
 
 ## How to Transact
 
-[`TransactionTask.java`](app/src/main/java/one/block/androidexampleapp/TransactionTask.java) contains basic sample code for constructing, signing and broadcasting transactions using the `eosiojava` libraries.
+[`TransactionTask.java`] contains basic sample code for constructing, signing and broadcasting transactions using the `eosiojava` libraries.
 
 ### Set Up Your TransactionSession
 

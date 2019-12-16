@@ -4,7 +4,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "one.block.androidexampleapp"
+        applicationId "bisma.rabia.gogreenantalya"
         minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
@@ -12,7 +12,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    def Properties properties = new Properties()
+    dataBinding {
+        enabled = true
+    }
+
+    Properties properties = new Properties()
     properties.load(project.rootProject.file("eosio.properties").newDataInputStream())
 
     buildTypes {
@@ -25,7 +29,7 @@ android {
             resValue "string", "memo", properties.getProperty("memo", "")
             resValue "string", "private_keys", properties.getProperty("private_keys", "")
 
-            manifestPlaceholders = [usesCleartextTraffic:"true"]
+            manifestPlaceholders = [usesCleartextTraffic: "true"]
         }
         release {
             resValue "string", "node_url", properties.getProperty("node_url", "")
@@ -36,7 +40,7 @@ android {
             resValue "string", "memo", properties.getProperty("memo", "")
             resValue "string", "private_keys", properties.getProperty("private_keys", "")
 
-            manifestPlaceholders = [usesCleartextTraffic:"false"]
+            manifestPlaceholders = [usesCleartextTraffic: "false"]
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -67,11 +71,14 @@ dependencies {
     implementation 'one.block:eosiojavaandroidabieosserializationprovider:0.1.0'
     implementation 'one.block:eosiojavarpcprovider:0.1.1'
 
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.appcompat:appcompat:1.2.0-alpha01'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.2.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'androidx.test:runner:1.3.0-alpha03'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha03'
     androidTestImplementation 'com.squareup.okhttp3:mockwebserver:3.12.1'
     implementation 'com.google.android.material:material:1.0.0'
 }
