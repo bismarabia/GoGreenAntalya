@@ -1,4 +1,4 @@
-package bisma.rabia.gogreenantalya;
+package bisma.rabia.gogreenantalya.utils;
 
 import android.os.AsyncTask;
 

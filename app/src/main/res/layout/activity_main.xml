@@ -5,7 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="bisma.rabia.gogreenantalya.MainActivity">
+        tools:context="bisma.rabia.gogreenantalya.activity.MainActivity">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_from_account"

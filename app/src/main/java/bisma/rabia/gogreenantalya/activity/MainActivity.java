@@ -1,4 +1,4 @@
-package bisma.rabia.gogreenantalya;
+package bisma.rabia.gogreenantalya.activity;
 
 import android.os.Bundle;
 import android.text.Html;
@@ -14,6 +14,10 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import bisma.rabia.gogreenantalya.utils.CheckBalanceTask;
+import bisma.rabia.gogreenantalya.R;
+import bisma.rabia.gogreenantalya.utils.TransactionTask;
 
 public class MainActivity extends AppCompatActivity {
 

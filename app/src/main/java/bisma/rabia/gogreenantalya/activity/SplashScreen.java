@@ -1,4 +1,4 @@
-package bisma.rabia.gogreenantalya;
+package bisma.rabia.gogreenantalya.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import bisma.rabia.gogreenantalya.R;
 import bisma.rabia.gogreenantalya.databinding.ActivitySplashScreenBinding;
 
 public class SplashScreen extends AppCompatActivity {

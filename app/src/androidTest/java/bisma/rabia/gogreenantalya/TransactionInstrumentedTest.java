@@ -13,6 +13,8 @@ import org.junit.runner.RunWith;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+import bisma.rabia.gogreenantalya.utils.TransactionTask;
+
 import static org.junit.Assert.assertTrue;
 
 @RunWith(AndroidJUnit4.class)
