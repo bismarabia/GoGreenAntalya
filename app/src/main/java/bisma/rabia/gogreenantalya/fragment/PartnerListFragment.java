@@ -17,7 +17,7 @@ import java.util.List;
 import bisma.rabia.gogreenantalya.R;
 import bisma.rabia.gogreenantalya.databinding.FragmentPartnersListBinding;
 
-public class PartnersFragment extends Fragment {
+public class PartnerListFragment extends Fragment {
 
     private FragmentPartnersListBinding fragmentPartnersListBinding;
 

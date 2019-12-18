@@ -5,16 +5,21 @@
     <item
         android:id="@+id/mni_bottom_nav_home"
         android:icon="@drawable/ico_home_black_24dp"
-        android:title="Home"
+        android:title="@string/home"
+        />
+    <item
+        android:id="@+id/mni_bottom_nav_coupons"
+        android:icon="@drawable/ico_coupon_black_24dp"
+        android:title="@string/coupons"
         />
     <item
         android:id="@+id/mni_bottom_nav_partners"
         android:icon="@drawable/ico_group_black_24dp"
-        android:title="Partners"
+        android:title="@string/partners"
         />
     <item
         android:id="@+id/mni_bottom_nav_about"
         android:icon="@drawable/ico_account_circle_black_24dp"
-        android:title="About"
+        android:title="@string/about"
         />
 </menu>

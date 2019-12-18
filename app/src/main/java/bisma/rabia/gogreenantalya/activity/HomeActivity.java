@@ -20,8 +20,8 @@ import bisma.rabia.gogreenantalya.R;
 import bisma.rabia.gogreenantalya.databinding.LayoutActivityHomeBinding;
 import bisma.rabia.gogreenantalya.fragment.AboutUsFragment;
 import bisma.rabia.gogreenantalya.fragment.HomeFragment;
-import bisma.rabia.gogreenantalya.fragment.PartnersFragment;
-import bisma.rabia.gogreenantalya.fragment.RecycleFragment;
+import bisma.rabia.gogreenantalya.fragment.PartnerListFragment;
+import bisma.rabia.gogreenantalya.fragment.CouponListFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -39,11 +39,14 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.mni_bottom_nav_home:
                         layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(0);
                         break;
-                    case R.id.mni_bottom_nav_partners:
+                    case R.id.mni_bottom_nav_coupons:
                         layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(1);
                         break;
-                    case R.id.mni_bottom_nav_about:
+                    case R.id.mni_bottom_nav_partners:
                         layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(2);
+                        break;
+                    case R.id.mni_bottom_nav_about:
+                        layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(3);
                         break;
                 }
                 return true;
@@ -58,9 +61,12 @@ public class HomeActivity extends AppCompatActivity {
                         layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_home);
                         break;
                     case 1:
-                        layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_partners);
+                        layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_coupons);
                         break;
                     case 2:
+                        layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_partners);
+                        break;
+                    case 3:
                         layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_about);
                         break;
                 }
@@ -88,8 +94,10 @@ public class HomeActivity extends AppCompatActivity {
                 case 0:
                     return new HomeFragment();
                 case 1:
-                    return new PartnersFragment();
+                    return new CouponListFragment();
                 case 2:
+                    return new PartnerListFragment();
+                case 3:
                     return new AboutUsFragment();
             }
             return null;
@@ -97,7 +105,7 @@ public class HomeActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
     }
 }
