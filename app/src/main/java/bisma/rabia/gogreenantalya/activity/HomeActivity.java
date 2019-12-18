@@ -39,14 +39,11 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.mni_bottom_nav_home:
                         layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(0);
                         break;
-                    case R.id.mni_bottom_nav_recycle:
+                    case R.id.mni_bottom_nav_partners:
                         layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(1);
                         break;
-                    case R.id.mni_bottom_nav_partners:
-                        layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(2);
-                        break;
                     case R.id.mni_bottom_nav_about:
-                        layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(3);
+                        layoutActivityHomeBinding.vpHomeActivity.setCurrentItem(2);
                         break;
                 }
                 return true;
@@ -61,12 +58,9 @@ public class HomeActivity extends AppCompatActivity {
                         layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_home);
                         break;
                     case 1:
-                        layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_recycle);
-                        break;
-                    case 2:
                         layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_partners);
                         break;
-                    case 3:
+                    case 2:
                         layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_about);
                         break;
                 }
@@ -94,10 +88,8 @@ public class HomeActivity extends AppCompatActivity {
                 case 0:
                     return new HomeFragment();
                 case 1:
-                    return new RecycleFragment();
-                case 2:
                     return new PartnersFragment();
-                case 3:
+                case 2:
                     return new AboutUsFragment();
             }
             return null;
@@ -105,7 +97,7 @@ public class HomeActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 4;
+            return 3;
         }
     }
 }

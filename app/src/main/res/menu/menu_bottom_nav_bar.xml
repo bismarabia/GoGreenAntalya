@@ -8,11 +8,6 @@
         android:title="Home"
         />
     <item
-        android:id="@+id/mni_bottom_nav_recycle"
-        android:icon="@drawable/ico_recycle_black_24dp"
-        android:title="Partners"
-        />
-    <item
         android:id="@+id/mni_bottom_nav_partners"
         android:icon="@drawable/ico_group_black_24dp"
         android:title="Partners"

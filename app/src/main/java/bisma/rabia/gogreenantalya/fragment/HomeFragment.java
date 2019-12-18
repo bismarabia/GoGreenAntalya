@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
                 if (balance.contains("EOS")) {
                     balance = balance.replace("EOS", "").trim();
                 }
-                fragmentHomeBinding.txvHomeBalance.setText("Balance \n" + balance);
+                fragmentHomeBinding.txvHomeBalance.setText(String.format("Balance \n%s", balance));
             }
         }).execute(nodeUrl, "rabia");
     }
