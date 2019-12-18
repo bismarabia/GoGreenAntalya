@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import bisma.rabia.gogreenantalya.R;
 import bisma.rabia.gogreenantalya.databinding.LayoutActivityHomeBinding;
-import bisma.rabia.gogreenantalya.fragment.AboutMeFragment;
+import bisma.rabia.gogreenantalya.fragment.AboutUsFragment;
 import bisma.rabia.gogreenantalya.fragment.HomeFragment;
 import bisma.rabia.gogreenantalya.fragment.PartnersFragment;
 import bisma.rabia.gogreenantalya.fragment.RecycleFragment;
@@ -89,7 +89,7 @@ public class HomeActivity extends AppCompatActivity {
                 case 2:
                     return new PartnersFragment();
                 case 3:
-                    return new AboutMeFragment();
+                    return new AboutUsFragment();
             }
             return null;
         }

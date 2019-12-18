@@ -7,15 +7,17 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import bisma.rabia.gogreenantalya.R;
 
-public class AboutMeFragment extends Fragment {
+public class AboutUsFragment extends Fragment {
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_about_me, container, false);
+        return DataBindingUtil.inflate(LayoutInflater.from(getActivity()), R.layout.fragment_about_us, container, false).getRoot();
     }
 }

@@ -37,6 +37,9 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void finish(boolean success, String updateContent, String balance) {
+                if (balance.contains("EOS")) {
+                    balance = balance.replace("EOS", "").trim();
+                }
                 fragmentHomeBinding.txvHomeBalance.setText("Point \n" + balance);
             }
         }).execute(nodeUrl, "rabia");
