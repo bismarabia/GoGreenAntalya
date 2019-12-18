@@ -2,11 +2,13 @@ package bisma.rabia.gogreenantalya.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -25,10 +27,12 @@ import bisma.rabia.gogreenantalya.fragment.CouponListFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
+    LayoutActivityHomeBinding layoutActivityHomeBinding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final LayoutActivityHomeBinding layoutActivityHomeBinding = DataBindingUtil.inflate(LayoutInflater.from(this), R.layout.layout_activity_home, null, false);
+        layoutActivityHomeBinding = DataBindingUtil.inflate(LayoutInflater.from(this), R.layout.layout_activity_home, null, false);
         setContentView(layoutActivityHomeBinding.getRoot());
 
         layoutActivityHomeBinding.vpHomeActivity.setAdapter(new MyAdapter(getSupportFragmentManager()));
@@ -76,7 +80,7 @@ public class HomeActivity extends AppCompatActivity {
         layoutActivityHomeBinding.fabHomeActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, QrCodeActivity.class));
+                startActivityForResult(new Intent(HomeActivity.this, QrCodeActivity.class), 4321);
             }
         });
     }
@@ -106,6 +110,14 @@ public class HomeActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return 4;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 4321) {
+            layoutActivityHomeBinding.vpHomeActivity.setAdapter(new MyAdapter(getSupportFragmentManager()));
         }
     }
 }

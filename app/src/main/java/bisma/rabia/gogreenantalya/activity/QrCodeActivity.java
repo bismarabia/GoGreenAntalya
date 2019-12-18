@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -28,6 +29,14 @@ public class QrCodeActivity extends AppCompatActivity {
         setContentView(activityQrCodeBinding.getRoot());
 
         activityQrCodeBinding.imvQrCode.setImageBitmap(encodeAsBitmap(PreferenceManager.getDefaultSharedPreferences(this).getString("username", "")));
+
+        activityQrCodeBinding.btnQrCodeConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(4321);
+                finish();
+            }
+        });
     }
 
     Bitmap encodeAsBitmap(String str) {

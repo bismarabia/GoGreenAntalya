@@ -28,6 +28,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        initiateBalance();
+    }
+
+    public void initiateBalance() {
         String nodeUrl = getString(R.string.node_url);
         new CheckBalanceTask(new CheckBalanceTask.CheckBalanceTaskCallback() {
             @Override
