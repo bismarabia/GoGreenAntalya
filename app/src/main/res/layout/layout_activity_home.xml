@@ -28,7 +28,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_margin="16dp"
-                android:src="@drawable/ico_qr_code_black_24dp"
+                android:src="@drawable/ico_qr_code_white_24dp"
                 android:backgroundTint="@color/colorPrimary"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>

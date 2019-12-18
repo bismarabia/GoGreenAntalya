@@ -16,4 +16,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="going_green_is_not_just_a_slogan_for_some_people_the_concept_of_going_green_is_a_lifestyle_adjusment_that_encompasses_every_aspect_of_a_person_s_lifestyle_to_someone_looking_in_at_this_lifestyle_the_concept_of_why_someone_should_go_green_may_seem_odd_all_an_outsider_may_see_is_someone_who_recycles_carpools_and_chooses_to_buy_organic_food_the_truth_is_the_option_to_go_green_has_several_reasons_and_benefits_that_may_not_be_outwardly_apparent">Going green is not just a slogan. For some people the concept of going green is a lifestyle adjusment that encompasses every aspect of a person’s lifestyle. To someone looking in at this lifestyle, the concept of why someone should go green may seem odd. All an outsider may see is someone who recycles, carpools and chooses to buy organic food. The truth is the option to go green has several reasons and benefits that may not be outwardly apparent.</string>
     <string name="put_your_phone_in_front_of_the_machine_to_be_scanned">Put Your Phone in front of the machine to be scanned!</string>
+    <string name="username">Username</string>
+    <string name="please_enter_your_username">Please enter your username to continue</string>
 </resources>
