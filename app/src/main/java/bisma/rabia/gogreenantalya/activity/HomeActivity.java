@@ -1,8 +1,10 @@
 package bisma.rabia.gogreenantalya.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -68,6 +70,13 @@ public class HomeActivity extends AppCompatActivity {
                         layoutActivityHomeBinding.bnvActivityHome.setSelectedItemId(R.id.mni_bottom_nav_about);
                         break;
                 }
+            }
+        });
+
+        layoutActivityHomeBinding.fabHomeActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, QrCodeActivity.class));
             }
         });
     }
