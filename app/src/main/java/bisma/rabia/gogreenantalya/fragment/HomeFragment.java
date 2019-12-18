@@ -16,7 +16,7 @@ import bisma.rabia.gogreenantalya.utils.CheckBalanceTask;
 
 public class HomeFragment extends Fragment {
 
-    FragmentHomeBinding fragmentHomeBinding;
+    private FragmentHomeBinding fragmentHomeBinding;
 
     @Nullable
     @Override
